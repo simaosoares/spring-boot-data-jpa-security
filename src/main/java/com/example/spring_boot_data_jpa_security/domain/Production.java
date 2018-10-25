@@ -5,7 +5,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
-import org.springframework.security.core.userdetails.User;
 
 @Entity
 public class Production extends AbstractPersistable<Integer> {
@@ -13,10 +12,7 @@ public class Production extends AbstractPersistable<Integer> {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "managerId")
-    private User manager;
+    @JoinColumn(name = "productionManagementId")
+    private ProductionManagement productionManagement;
 
-    @ManyToOne
-    @JoinColumn(name = "productionManagerId")
-    private User productionManager;
 }
