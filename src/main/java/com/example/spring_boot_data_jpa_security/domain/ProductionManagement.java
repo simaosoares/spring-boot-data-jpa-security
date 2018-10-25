@@ -8,7 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-class ProductionManagement extends AbstractPersistable<Integer> {
+public class ProductionManagement extends AbstractPersistable<Integer> {
 
     @ManyToOne
     @JoinColumn(name = "managerId")

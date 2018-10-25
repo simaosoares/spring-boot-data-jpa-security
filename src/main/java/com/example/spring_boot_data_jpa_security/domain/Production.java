@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 @Entity
-class Production extends AbstractPersistable<Integer> {
+public class Production extends AbstractPersistable<Integer> {
 
     private String name;
 
